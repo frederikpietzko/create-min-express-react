@@ -1,0 +1,19 @@
+{
+  "name": "create-min-express-react",
+  "version": "1.0.0",
+  "description": "A CLI to create a minial express.js application.",
+  "main": "src/cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "create-min-express-react": "src/cli.js"
+  },
+  "author": "frederikpietzko",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^4.1.0",
+    "fs": "0.0.1-security",
+    "mkdirp": "^1.0.3"
+  }
+}
