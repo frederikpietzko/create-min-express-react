@@ -7,10 +7,17 @@ Create a minimal express.js server together with the simplicity of create-react-
 
 ## Quick Overview
 
+###### Install the cli:
+
+```sh
+npm install -g create-min-express-react
+
+```
+
 ###### To run the dev server:
 
 ```sh
-npx create-min-express-react my-app
+create-min-express-react my-app
 cd my-app
 npm install
 npm run dev
@@ -21,7 +28,7 @@ The dev command utilizes the concurrently package to run the server via nodemon 
 ###### To run the application:
 
 ```sh
-npx create-min-express-react my-app
+create-min-express-react my-app
 cd my-app
 npm install
 npm build
