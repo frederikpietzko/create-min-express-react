@@ -1,6 +1,6 @@
 {
   "name": "create-min-express-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI to create a minial express.js application.",
   "main": "src/cli.js",
   "bin": {
