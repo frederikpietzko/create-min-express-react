@@ -4,7 +4,6 @@ Create a minimal express.js server together with the simplicity of create-react-
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
-![Node.js Package](https://github.com/frederikpietzko/create-min-express-react/workflows/Node.js%20Package/badge.svg?event=release)
 
 ## Quick Overview
 
