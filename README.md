@@ -2,6 +2,10 @@
 
 Create a minimal express.js server together with the simplicity of create-react-app. <br>
 
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+![Node.js Package](https://github.com/frederikpietzko/create-min-express-react/workflows/Node.js%20Package/badge.svg?event=release)
+
 ## Quick Overview
 
 ###### To run the dev server:
@@ -26,3 +30,12 @@ npm start
 ```
 
 npm build will execute the react-scripts build command that comes with CRA.
+
+## License
+
+[MIT](LICENSE)
+
+[npm-image]: https://img.shields.io/npm/v/create-min-express-react.svg
+[npm-url]: https://www.npmjs.com/package/create-min-express-react
+[downloads-url]: https://npmjs.org/package/create-min-express-react
+[downloads-image]: https://img.shields.io/npm/dm/create-min-express-react.svg
