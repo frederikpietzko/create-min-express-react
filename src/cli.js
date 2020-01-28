@@ -57,7 +57,7 @@ function createApplication(name, dir) {
     { cwd: dir },
     (error, stdout, stderr) => {
       // Install the proxy middleware to proxy the CRA build server to the dev server on port 5000
-      copy("client/setupProxy.js", dir + "/client/src");
+      copy("client/setupProxy.js", dir + "/client/src/setupProxy.js");
 
       const child2 = exec(
         "npm install --save-dev http-proxy-middleware",
