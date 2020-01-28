@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "A CLI to create a minial express.js application.",
   "main": "src/cli.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "bin": {
     "create-min-express-react": "src/cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frederikpietzko/create-min-express-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/frederikpietzko/create-min-express-react/issues"
+  },
+  "homepage": "https://github.com/frederikpietzko/create-min-express-react/#readme",
   "author": "frederikpietzko",
   "license": "MIT",
   "dependencies": {

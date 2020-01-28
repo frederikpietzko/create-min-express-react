@@ -29,6 +29,7 @@ function createApplication(name, dir) {
     main: "src/index.js",
     scripts: {
       start: "node src/index.js",
+      build: "npm run build --prefix client",
       server: "nodemon src/index.js",
       client: "npm run start --prefix client",
       dev: 'concurrently "npm run server" "npm run client"'
@@ -46,31 +47,46 @@ function createApplication(name, dir) {
   mkdir(dir, "src");
 
   write(path.join(dir, "package.json"), JSON.stringify(pkg, null, 2) + "\n");
-  copy("index.js", dir + "/src/index.js");
+  copy("src/index.js", dir + "/src/index.js");
   copy("gitignore", dir + "/.gitignore");
+
+  // Execute create-react-app
   console.log("   running create-react-app... this may take a while");
-  child = exec(
+  const child = exec(
     "npx create-react-app client",
     { cwd: dir },
     (error, stdout, stderr) => {
-      var prompt = launchedFromCmd() ? ">" : "$";
+      // Install the proxy middleware to proxy the CRA build server to the dev server on port 5000
+      copy("client/setupProxy.js", dir + "/client/src");
 
-      if (dir !== ".") {
-        console.log();
-        console.log("   change directory:");
-        console.log("     %s cd %s", prompt, dir);
-      }
+      const child2 = exec(
+        "npm install --save-dev http-proxy-middleware",
+        { cwd: dir + "/client" },
+        (error, stdout, stderr) => {
+          var prompt = launchedFromCmd() ? ">" : "$";
 
-      console.log();
-      console.log("   install dependencies:");
-      console.log("     %s npm install", prompt);
-      console.log();
-      console.log("   run the app:");
-      console.log("   npm run start");
-      console.log();
-      console.log("   run in dev mode:");
-      console.log("   npm run dev");
-      console.log();
+          if (dir !== ".") {
+            console.log();
+            console.log("   change directory:");
+            console.log("     %s cd %s", prompt, dir);
+          }
+
+          console.log();
+          console.log("   install dependencies:");
+          console.log("     %s npm install", prompt);
+          console.log();
+          console.log("   run the app:");
+          console.log("   npm run start");
+          console.log();
+          console.log("   run in dev mode:");
+          console.log("   npm run dev");
+          console.log();
+        }
+      );
+
+      child2.stdout.on("data", data => {
+        console.log(data);
+      });
     }
   );
 
