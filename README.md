@@ -31,6 +31,29 @@ npm start
 
 npm build will execute the react-scripts build command that comes with CRA.
 
+###### To install dependencies for the server:
+
+Navigate to your project directory and run
+
+```sh
+npm install <package name>
+```
+
+###### To install depecndencies for the client:
+
+Navigate to your project directory and run
+
+```sh
+cd client
+npm install <package name>
+```
+
+or
+
+```sh
+npm install <package name> --prefix client
+```
+
 ## License
 
 [MIT](LICENSE)
