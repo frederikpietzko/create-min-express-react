@@ -20,5 +20,12 @@
     "commander": "^4.1.0",
     "fs": "0.0.1-security",
     "mkdirp": "^1.0.3"
-  }
+  },
+  "keywords": [
+    "create-react-app",
+    "cra",
+    "CRA",
+    "express",
+    "server"
+  ]
 }
